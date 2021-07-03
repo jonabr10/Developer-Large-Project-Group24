@@ -1,17 +1,22 @@
 # Developer-Environment-For-Large-Project-Group24
 
+# OPEN ME IN VSCODE OR ANY OTHER EDITOR TO SEE INSTRUCTIONS!
+
 <!---
 
-Steps on settings up environment
+Steps on setting up environment
 
 Things you should already have
 - nodejs
-- npm
 - nodemon
 - react-app
+- heroku
 
-__________________________________
+<double check> heroku --version 
+
+==================================
 Connecting to the mongoDB database
+==================================
 
 <go to> From the terminal/commandLine > navigate to project folder 
 
@@ -23,17 +28,68 @@ Connecting to the mongoDB database
 <terminal cmd> touch .env
     <contents>
     MONGODB_URI="mongodb+srv://Admin:COP4331@cluster0.4b2nn.mongodb.net/Dev_Large_Project_DB?retryWrites=true&w=majority"
-    <blank template>
-    mongodb+srv://<User>:<password>@cluster0.4b2nn.mongodb.net/<myFirstDatabase>?retryWrites=true&w=majority
-    Note: Replace <User> and <password> with the password for the Admin user. Replace <myFirstDatabase> with the name of the database that connections will use by default. Ensure any option params are URL encoded.
-    
+
+<terminal cmd> npm install
+
 <terminal cmd> sudo npm start
-    <caution> running the command may throw an exception error
+    <caution> running the command may throw some errors
         <what if> Error: Cannot find module 'express'
             <terminal cmd> npm install express
         
         <what if> Error: Cannot find module 'dotenv'
             <terminal cmd> npm install dotenv
+
+<you can now test api endpoints locally!>
+    <URL> http://localhost:5000/api/< replace w/ api endpoint>
+
+===============================
+Connecting to the Heroku Server
+===============================
+
+<terminal cmd> sudo npm install -g heroku
+
+<terminal cmd> sudo npm install dotenv
+
+<terminal cmd> heroku login
+
+<go to> frontend folder
+    <temrinal cmd> touch .gitignore
+        <contents>
+        # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+        # dependencies
+        /node_modules
+        /.pnp
+        .pnp.js
+
+        # testing
+        /coverage
+
+        # production
+        # /build
+
+        # misc
+        .DS_Store
+        .env.local
+        .env.development.local
+        .env.test.local
+        .env.production.local
+
+        npm-debug.log*
+        yarn-debug.log*
+        yarn-error.log*
+
+<terminal cmd> git config --global user.email "rick.jsventures.com"
+
+<terminal cmd> git config --global user.name "Rick Leinecker"
+
+<terminal cmd> heroku git:remote -a health-n-wellness-dev
+
+<terminal cmd> sudo git add -A
+
+<terminal cmd> sudo git add -A
+
+
 
 
 --->

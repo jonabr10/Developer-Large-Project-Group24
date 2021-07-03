@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
 function TrackerUI() {
-    const app_name = 'health-n-wellness'
+    // TODO: don't forget to change this!!
+    const app_name = 'health-n-wellness-dev'
+
     function buildPath(route) {
         if (process.env.NODE_ENV === 'production') {
             return 'https://' + app_name + '.herokuapp.com/' + route;
