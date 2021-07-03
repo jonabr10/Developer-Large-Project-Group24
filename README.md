@@ -87,7 +87,7 @@ Connecting to the Heroku Server
 
 <terminal cmd> sudo git add -A
 
-<terminal cmd> sudo git add -A
+<terminal cmd> sudo git commit -am "Commit Message"
 
 
 
