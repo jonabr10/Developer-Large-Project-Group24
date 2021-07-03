@@ -1,1 +1,1 @@
-# Developer-Large-Project-Group24
+# Developer-Environment-For-Large-Project-Group24
