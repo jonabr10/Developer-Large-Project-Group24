@@ -89,7 +89,21 @@ Connecting to the Heroku Server
 
 <terminal cmd> sudo git commit -am "Commit Message"
 
+// SUPER-DUPER IMPORTANT READ BEFORE GOING THROUGH THE COMMANDS BELOW: https://help.heroku.com/O0EXQZTA/how-do-i-switch-branches-from-master-to-main
 
+
+<DID YOU READ ARTICLE ABOVE?>
+<terminal cmd> git checkout -b main
+
+<terminal cmd> git push heroku main
+
+<check logs>
+    <terminal cmd> heroku logs --tail
+
+<terminal cmd> heroku open
+
+
+congrats you're done!
 
 
 --->

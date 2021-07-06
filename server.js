@@ -39,6 +39,7 @@ app.post('/api/addcard', async (req, res, next) => {
     res.status(200).json(ret);
 });
 
+// IMPORTANT: Cards Login
 app.post('/api/login', async (req, res, next) => {
     // incoming: login, password
     // outgoing: id, firstName, lastName, error
